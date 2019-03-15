@@ -24,9 +24,9 @@ class News extends Component {
   render() {
     const { news } = this.state;
     return (
-      <div className="col-sm" style={{ width: "20rem" }}>
+      <div className="col-sm" style={{ width: "21rem" }}>
         {news.map(article => {
-          return <NewsCard json={article} />;
+          return <NewsCard key={article.title} json={article} />;
         })}
       </div>
     );

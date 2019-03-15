@@ -17,7 +17,17 @@ const NewsCard = ({ json }) => {
             </a>
           </div>
           <div className="col-sm">
-            <p>{json.source.name}</p>
+            <p>
+              {json.source.name.substring(
+                0,
+                json.source.name.indexOf(".com")
+              ) !== ""
+                ? json.source.name.substring(
+                    0,
+                    json.source.name.indexOf(".com")
+                  )
+                : json.source.name}
+            </p>
           </div>
         </div>
       </div>

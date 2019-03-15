@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import "./App.css";
 import News from "./components/news/News";
+import Stocks from "./components/stocks/stocks";
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 class App extends Component {
@@ -13,8 +14,8 @@ class App extends Component {
         <div className="col-lg">
           <h1>google page</h1>
         </div>
-        <div className="col-sm">
-          <h1>stocks</h1>
+        <div className="col-" style={{ overflow: "auto", height: "100%" }}>
+          <Stocks />
         </div>
       </div>
     );
