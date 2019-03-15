@@ -5,7 +5,7 @@ const StockCard = ({ json }) => {
     height: "24px"
   };
   return (
-    <div className="card m-2" style={{ width: "18rem" }}>
+    <div className="card m-2" style={{ width: "15rem" }}>
       <div className="card-body" style={{ textAlign: "center" }}>
         <p
           className="card-title"
@@ -31,10 +31,10 @@ const StockCard = ({ json }) => {
         </div>
         <div className="row">
           <div className="col-sm" style={colStyles}>
-            <p>H: ${json.day_high}</p>
+            <p>H${json.day_high}</p>
           </div>
           <div className="col-sm" style={colStyles}>
-            <p>L: ${json.day_low}</p>
+            <p>L${json.day_low}</p>
           </div>
         </div>
       </div>

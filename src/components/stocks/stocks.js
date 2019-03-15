@@ -28,7 +28,7 @@ class Stocks extends Component {
   render() {
     const stockData = Array.from(this.state.stockData);
     return (
-      <div className="col-sm" style={{ width: "21rem" }}>
+      <div className="col-sm" style={{ width: "18rem" }}>
         {stockData.map(stock => {
           return <StockCard key={stock.name} json={stock} />;
         })}
