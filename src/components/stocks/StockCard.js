@@ -1,11 +1,14 @@
 import React from "react";
 
-const StockCard = ({ json }) => {
+const StockCard = ({ background, json }) => {
   let colStyles = {
     height: "24px"
   };
   return (
-    <div className="card m-2" style={{ width: "15rem" }}>
+    <div
+      className="card m-2"
+      style={{ width: "12rem", backgroundColor: background }}
+    >
       <div className="card-body" style={{ textAlign: "center" }}>
         <p
           className="card-title"
@@ -31,10 +34,18 @@ const StockCard = ({ json }) => {
         </div>
         <div className="row">
           <div className="col-sm" style={colStyles}>
-            <p>H${json.day_high}</p>
+            <p>High</p>
           </div>
           <div className="col-sm" style={colStyles}>
-            <p>L${json.day_low}</p>
+            <p>${json.day_high}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm" style={colStyles}>
+            <p>Low</p>
+          </div>
+          <div className="col-sm" style={colStyles}>
+            <p>${json.day_low}</p>
           </div>
         </div>
       </div>

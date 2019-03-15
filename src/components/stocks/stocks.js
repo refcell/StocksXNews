@@ -27,10 +27,19 @@ class Stocks extends Component {
 
   render() {
     const stockData = Array.from(this.state.stockData);
+    let background = "#d9ead3";
     return (
-      <div className="col-sm" style={{ width: "18rem" }}>
+      <div className="col-sm" style={{ width: "14rem" }}>
         {stockData.map(stock => {
-          return <StockCard key={stock.name} json={stock} />;
+          if (stock.day_change.indexOf("-") >= 0) {
+            background = "#f5cbcc";
+          }
+          if (stock.day_change === 0) {
+            background = "#ffffff";
+          }
+          return (
+            <StockCard key={stock.name} background={background} json={stock} />
+          );
         })}
       </div>
     );
